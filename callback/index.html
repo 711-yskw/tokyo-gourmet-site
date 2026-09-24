@@ -1,0 +1,10 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Authorization</title><link rel="stylesheet" href="../style.css"></head><body><main>
+<h1>認証 / Authorization</h1>
+<p id="msg">処理中…</p>
+<p class="muted">このURL全体をコピーしてツールに貼り付けてください。 / Copy this page's full URL and paste it into the tool.</p>
+<script>
+const p=new URLSearchParams(location.search);
+document.getElementById("msg").textContent=p.get("error")?("エラー / Error: "+p.get("error")):(p.get("code")?"認証が完了しました / Authorized.":"コードがありません / No code.");
+</script>
+</main></body></html>
